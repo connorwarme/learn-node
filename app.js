@@ -43,3 +43,26 @@ const append = async () => {
 }
 append();
 // worked!!
+//
+// read a file
+const location = '/home/peregrinning/Documents/Coding/TOP/learn-node/'
+fs.readFile(`${location}initial.txt`, 'utf-8', (err, data) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log(data);
+})
+// worked!!
+//
+// read a file via fs/promises
+const readP = async () => {
+    try {
+        const data = await fsp.readFile(`${location}promises.txt`, { encoding: 'utf-8'});
+        console.log(data);
+    } catch (err) {
+        console.log(err);
+    }
+}
+readP();
+// worked!!
