@@ -120,3 +120,7 @@ portURL.port = 'asdfg';
 portURL.port = '45678dfghjk';
 // console.log(portURL.port);
 
+const protoURL = new globalThis.URL('https://example.log');
+// console.log(protoURL.protocol);
+protoURL.protocol = 'ftp';
+// console.log(protoURL.href);
