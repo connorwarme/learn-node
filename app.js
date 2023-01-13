@@ -124,3 +124,13 @@ const protoURL = new globalThis.URL('https://example.log');
 // console.log(protoURL.protocol);
 protoURL.protocol = 'ftp';
 // console.log(protoURL.href);
+
+const searchURL = new globalThis.URL('https://example.org/abd?12345');
+// console.log(searchURL.search);
+searchURL.search = 'supercalifragilistic';
+// console.log(searchURL.href);
+
+const paramsURL = new globalThis.URL('https://example.org/abc?foo=~bar');
+console.log(paramsURL.search); // returns ?foo=~bar
+paramsURL.searchParams.sort();
+console.log(paramsURL.search); // returns ?foo=%7Ebar
