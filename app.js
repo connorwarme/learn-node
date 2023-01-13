@@ -96,4 +96,27 @@ hrefURL.href = 'https://example.org/thisworks/possibly';
 // console.log(hrefURL.href);
 
 const originURL = new globalThis.URL('https://example.com/foo/bar?baz');
-console.log(originURL.origin);
+// console.log(originURL.origin);
+
+const pwURL = new globalThis.URL('hhtps://abc:xyz@example.com');
+// console.log(pwURL.password);
+pwURL.password = '1234';
+// console.log(pwURL.href);
+
+const pathURL = new globalThis.URL('https://example.org/abc/xyz?1234');
+// console.log(pathURL.pathname);
+pathURL.pathname = '/asdfghjkl'
+// console.log(pathURL.href);
+
+const portURL = new globalThis.URL('https://example.com:9999');
+// console.log(portURL.port);
+portURL.port = '443';
+// console.log(portURL.port);
+// console.log(portURL.href);
+portURL.port = '12345';
+// console.log(portURL.href);
+portURL.port = 'asdfg';
+// console.log(portURL.port);
+portURL.port = '45678dfghjk';
+// console.log(portURL.port);
+
