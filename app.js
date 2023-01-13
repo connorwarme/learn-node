@@ -41,7 +41,8 @@ const append = async () => {
         console.log(err);
     }
 }
-append();
+// append();
+
 // worked!!
 //
 // read a file
@@ -51,7 +52,7 @@ fs.readFile(`${location}initial.txt`, 'utf-8', (err, data) => {
         console.log(err);
         return;
     }
-    console.log(data);
+    // console.log(data);
 })
 // worked!!
 //
@@ -64,5 +65,27 @@ const readP = async () => {
         console.log(err);
     }
 }
-readP();
+// readP();
+
 // worked!!
+//
+// learning URL
+const myURL = new globalThis.URL('/foo', 'https://example.com/');
+// console.log(myURL);
+
+const anURL = new globalThis.URL('https://example.org/foo#bar');
+// console.log(anURL);
+anURL.hash = 'boom';
+// console.log(anURL.href);
+
+const hostURL = new globalThis.URL('https://example.org:81/foobar');
+// console.log(hostURL.host);
+hostURL.host = 'example.org:82';
+// console.log(hostURL.href);
+
+const hostnameURL = new globalThis.URL('https://example.org:801/foobar');
+// console.log(hostnameURL.hostname);
+hostnameURL.hostname = 'example.net';
+// console.log(hostnameURL.href);
+hostnameURL.host = 'example.org:802';
+// console.log(hostnameURL.href);
