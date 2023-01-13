@@ -94,3 +94,6 @@ const hrefURL = new globalThis.URL('https://example.com/dude/this/works');
 // console.log(hrefURL.href);
 hrefURL.href = 'https://example.org/thisworks/possibly';
 // console.log(hrefURL.href);
+
+const originURL = new globalThis.URL('https://example.com/foo/bar?baz');
+console.log(originURL.origin);
