@@ -131,6 +131,11 @@ searchURL.search = 'supercalifragilistic';
 // console.log(searchURL.href);
 
 const paramsURL = new globalThis.URL('https://example.org/abc?foo=~bar');
-console.log(paramsURL.search); // returns ?foo=~bar
+// console.log(paramsURL.search); // returns ?foo=~bar
 paramsURL.searchParams.sort();
-console.log(paramsURL.search); // returns ?foo=%7Ebar
+// console.log(paramsURL.search); // returns ?foo=%7Ebar
+
+const userURL = new globalThis.URL('https://abc:xyz@example.com');
+console.log(userURL.username); // returns abc
+userURL.username = '12345';
+console.log(userURL.href);
