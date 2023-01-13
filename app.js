@@ -89,3 +89,8 @@ hostnameURL.hostname = 'example.net';
 // console.log(hostnameURL.href);
 hostnameURL.host = 'example.org:802';
 // console.log(hostnameURL.href);
+
+const hrefURL = new globalThis.URL('https://example.com/dude/this/works');
+// console.log(hrefURL.href);
+hrefURL.href = 'https://example.org/thisworks/possibly';
+// console.log(hrefURL.href);
