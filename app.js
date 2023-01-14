@@ -1,3 +1,5 @@
+const dt = require('./firstmodule.js');
+
 console.log('hello world');
 
 // write files
@@ -146,3 +148,10 @@ eventEmitter.on('start', (number, letter) => {
     console.log(`Started! Number ${number}, Letter ${letter}`);
 })
 eventEmitter.emit('start', 23, 'L');
+
+const http = require('http');
+http.createServer(function(req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write('The date and time are currently: ' + dt.myDateTime());
+    res.end('Hello World!');
+}).listen(8080);
