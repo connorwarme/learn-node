@@ -136,6 +136,13 @@ paramsURL.searchParams.sort();
 // console.log(paramsURL.search); // returns ?foo=%7Ebar
 
 const userURL = new globalThis.URL('https://abc:xyz@example.com');
-console.log(userURL.username); // returns abc
+// console.log(userURL.username); // returns abc
 userURL.username = '12345';
-console.log(userURL.href);
+// console.log(userURL.href);
+
+const EventEmitter = require('events');
+const eventEmitter = new EventEmitter();
+eventEmitter.on('start', (number, letter) => {
+    console.log(`Started! Number ${number}, Letter ${letter}`);
+})
+eventEmitter.emit('start', 23, 'L');
